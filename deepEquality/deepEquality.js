@@ -13,5 +13,15 @@
   */
 
   var deepEquals = function(obj1, obj2){
-
-  }
+    for (var key1 in obj1) {
+      for (var key2 in obj2) {
+        if(typeof obj1[key1] === "number" && typeof obj2[key2] === "number" || typeof obj1[key1] === "string" && typeof obj2[key2] === "string" || typeof obj1[key1] === "boolean" && typeof obj2[key2] === "boolean") {
+          if(obj1[key1] === obj2[key2]){
+            return true;
+          }
+        }
+          deepEquals(obj1[key1], obj2[key2])
+      }
+    }
+    return false;
+}
