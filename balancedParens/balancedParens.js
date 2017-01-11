@@ -27,7 +27,7 @@
 
 //  First function to q1 +q2 only;
  var balancedParens = function (input) {
-<<<<<<< HEAD
+
  	var x =input.length/2;
 	var y=input.length-x;
 	if (input === "(" || input === ")" || input ===")(" || input === "{" || input === "}" || input === "}{" || input === "[" || input === "]" || input === "][")  {
@@ -53,7 +53,7 @@
 	return false;
 };
 	
-=======
+
   var c=input.length/2;
   for (var i = 0; i < c; i++) {
     input=input.replace("()",'');
@@ -90,4 +90,4 @@
 
   return array.length === 0;
 }
->>>>>>> 6568bbd23274e6102779dd33ae75e4ed66b62768
+

@@ -17,7 +17,7 @@
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
 */
-<<<<<<< HEAD
+
 
 
 function generate () {
@@ -34,7 +34,7 @@ function generate () {
 			}
 		};
 		return newarr;
-=======
+
 function rockPaperScissors(number){
   var array =[];
   var array2 =["rock","paper","scissors"]
@@ -53,4 +53,4 @@ function rockPaperScissors(number){
   return bigArray + rockPaperScissors(number-1);
 }
 
->>>>>>> 6568bbd23274e6102779dd33ae75e4ed66b62768
+

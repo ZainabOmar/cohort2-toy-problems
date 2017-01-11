@@ -42,7 +42,7 @@ function each(coll, func) {
 }
 
 var bubbleSort = function(array) {
-	debugger
+
 	var element = array[0];
 	var max = 0; 
 	array.slice(1);
