@@ -47,7 +47,6 @@ function pingPongTracker () {
 	var timer1 = 0;
 	return {
 		timeSpentPlaying: function () {
-				
 			return timer1;
 		},
 		playOneGame: function () {

@@ -21,8 +21,46 @@ Complete the functions in order to provide this functionality.
 */
 
 function Jar() {
-  // TODO
+	var totalAmount = 0;
+	var amount = 0;
+	var obj = {fruit:{amount:amount}}
+  return {
+  	getConcentration: function (fruit) {
+  		var conc = 0;
+  		var amount = 0;
+  		for(var key in obj) {
+  			if(obj[fruit] === fruit) {
+  				conc = obj[fruit][amount]/totalAmount
+  			}
+  		}
+  		return conc;
+  	}
+  	,
+  	add: function (units, fruit) {
+  		totalAmount+=units
+  		for(var key in obj) {
+  			obj[key] = fruit;
+  			console.log(obj[fruit])
+  			for(var key2 in obj[fruit]) {
+  				obj[fruit][amount] =units
+  			}	
+  		}
+  	},
+  	getTotalAmount: function (fruit) {
+  		if(fruit === undefind) {
+  			return totalAmount;
+  		}
+  		else {
+			for(var key in obj) {
+				return obj[fruit][amount];
+  			}
+  		}
+  	}
+  }
 }
+
+
+
 
 /*
 These are some tests:
