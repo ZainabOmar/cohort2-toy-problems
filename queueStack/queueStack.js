@@ -6,42 +6,44 @@
  /**
    * Stack Class
    */
- var Stack = function() {
-  this.stack=[];
+   var Stack = function() {
+    stack=[];
+    counter =0 ;
+    return {
+     push: function(value){
+      stack[counter] = value;
+      counter++;
+      return value;
+    },
 
-   // add an item to the top of the stack
-   this.push = function(value){
-   };
+    pop: function(){ 
+      return stack.pop()
+      counter--;
+    },
 
-   // remove an item from the top of the stack
-   this.pop = function(){
-   };
-
-   // return the number of items in the stack
-   this.size = function(){
-   };
- };
+    size: function(){
+      return counter;
+    }
+  }
+};
 
  /**
    * Queue Class
    */
- var Queue = function() {
-   // Use two `stack` instances to implement your `queue` Class
+   var Queue = function() {
+
    var inbox = new Stack();
    var outbox = new Stack();
-
-   // called to add an item to the `queue`
+   
    this.enqueue = function(value){
-     
-     }
-   };
+    return this.Stack().push()
+  }
 
-   // called to remove an item from the `queue`
    this.dequeue = function(){
-    }
+   return this.Stack().pop()
    };
 
-   // should return the number of items in the queue
    this.size = function(){
-   };
+    return this.Stack().size()
+   }
  };
