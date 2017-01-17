@@ -51,7 +51,7 @@ You have to create a function that takes a positive integer number and returns t
 next bigger number formed by the same digits:
 
 Exanmples:
-nextBigger(12)==21
+	
 nextBigger(513)==531
 nextBigger(2017)==2071
 
@@ -63,5 +63,20 @@ nextBigger(531)==-1
 */
 
 function nextBigger(num){
-
+// transform the number to string
+	var temp = num.toString()
+// store the first number of "num" in a place to compare it with the other numbers
+	var max = parseFloat(temp[0]);
+// we need a place that will take all of those numbers and bind them in the string
+	var temp2 = "";
+// now we should git rid of the first number and start the loop from the beginning of the second number
+	temp = temp.slice(1);
+// start the loop 
+	for (var i = 0; i < temp.length; i++) {
+		if (parseFloat( temp[i] ) > max) {
+			max = parseFloat(temp[i]) 
+			temp2 += max.toString()
+		}
+	}
+	return parseFloat(temp2);
 }
