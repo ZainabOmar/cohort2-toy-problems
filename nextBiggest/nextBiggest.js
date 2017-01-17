@@ -35,7 +35,14 @@ rotate(data, 12478) // => [3, 4, 5, 1, 2]
 
 */
 function rotate(array, steps){
-
+	var newArr = array;
+	if(steps>0) {
+		for (var i = steps; i > -1 ; i--) {
+			newArr.unshift(array.pop())
+		}
+		return newArr;
+	}
+	return array;
 }
 
 /*

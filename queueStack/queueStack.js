@@ -34,16 +34,17 @@
 
    var inbox = new Stack();
    var outbox = new Stack();
-   
+
    this.enqueue = function(value){
-    return this.Stack().push()
+     inbox.push(value)
+     
   }
 
    this.dequeue = function(){
-   return this.Stack().pop()
-   };
+    
+   }
 
    this.size = function(){
-    return this.Stack().size()
+     this.Stack()
    }
  };
