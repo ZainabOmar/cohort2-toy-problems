@@ -5,5 +5,19 @@ Hint the answer is 1366.
 */
 
 var powerOfTwo = function(num){
+	var temp = num%70
+	var n = 0;
+	var x = 0;
+	//var array1 = temp.toString().split("")
+	if(num>=69) {
+		for (var i = temp; i < 0; i--) {
+			n = Math.pow(2, 69)
+			n.toString().split("")
+			for (var j = 0; j < n.length; j++) {
+				x += parseFloat(n[j])
+			}
+		}
+	}
 
+	return ;
 }
