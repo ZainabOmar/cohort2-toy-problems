@@ -18,7 +18,31 @@
 
 
 var LinkedList = function(){
-  //fill me in!
+	this.next= null
+  this.storage = {
+	  head: this.next,
+	  tail: this.next
+  };
+
 };
 
-//write methods here!
+
+LinkedList.prototype.addToTail = function (value) {
+	if(this.storage.tail === null) {
+		this.next=value;
+	}
+	this.storage.tail = value
+}
+
+LinkedList.prototype.removeHead = function () {
+	if(this.storage.tail !== null) {
+		this.storage.tail = null
+	}
+}
+
+LinkedList.prototype.contains = function (value) {
+	if (this.storage.hasOwnPrototype(value)) {
+		return true;
+	}
+	return false;
+}
