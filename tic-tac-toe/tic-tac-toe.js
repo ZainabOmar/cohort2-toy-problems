@@ -21,6 +21,70 @@ var solvedBoard = [[0,1,1],
 ticTacToe(solvedBoard);//should return 1
 */
 
+// function ticTacToe(board){
+// 	var counter = 0;
+// 	//board = board.toString().split("[")
+// 	//board = board[0].split(",")
+// 	if (board[0].indexOf(1)===0 && board[1].indexOf(1)===1 && board[2].indexOf(1)===2 || board[0].indexOf(1)===1 && board[1].indexOf(1)===1 && board[2].indexOf(1)===1 ||	board[0].indexOf(1)===2 && board[1].indexOf(1)===2 && board[2].indexOf(1)===2 || board[0].indexOf(1)===2 && board[1].indexOf(1)===1 && board[2].indexOf(1)===0 ||		board[0].indexOf(1)===0 && board[0].indexOf(1)===1 && board[0].indexOf(1)===2 || 		board[1].indexOf(1)===0 && board[1].indexOf(1)===1 && board[1].indexOf(1)===2 ||		board[2].indexOf(1)===0 && board[2].indexOf(1)===1 && board[2].indexOf(1)===2 ) {
+
+// 		return 1;
+// }
+// if (board[0].indexOf(2)===0 && board[1].indexOf(2)===1 && board[2].indexOf(2)===2 || board[0].indexOf(2)===1 && board[1].indexOf(2)===1 && board[2].indexOf(2)===1 ||  	board[0].indexOf(2)===2 && board[1].indexOf(2)===2 && board[2].indexOf(2)===2 || 	board[0].indexOf(2)===2 && board[1].indexOf(2)===1 && board[2].indexOf(2)===0 || 	board[0].indexOf(2)===0 && board[0].indexOf(2)===1 && board[0].indexOf(2)===2 || 	board[1].indexOf(2)===0 && board[1].indexOf(2)===1 && board[1].indexOf(2)===2 || board[2].indexOf(2)===0 && board[2].indexOf(2)===1 && board[2].indexOf(2)===2 ) {
+// 	return 2;
+// }
+// for (var i = 0; i < board.length; i++) {
+// 	if (board[0][i] === 0 || board[1][i] === 0 || board[2][i] === 0) {
+// 		counter ++;
+// 	}
+// }
+// if (counter >= 2) {
+// 	return -1;
+// }
+// };
+
+function checkRow(row) {
+	var counter1 = 0;
+	var counter2 = 0;
+	for(var i = 0; i<row.lenght; i++) {
+		if (row[i] === 1) {
+			counter1 ++;
+		}
+		if (row[i] === 2) {
+			counter2 ++;
+		}
+	}
+	if (counter1 === 3 || counter2 === 3) {
+		return true;
+	}
+}
+
+function checkCol (col) {
+	var counter1 = 0;
+	var counter2 = 0;
+	for(var i = 0; i<col.lenght; i++) {
+		if (col[i] === 1) {
+			counter1 ++;
+		}
+		if (col[i] === 2) {
+			counter2 ++;
+		}
+	}
+	if (counter1 === 3 || counter2 === 3) {
+		return true;
+	}
+}
+
+// function checkDiagonal (diagonal) {
+// 	for (var i = 0; i < Things.length; i++) {
+// 		Things[i]
+// 	}
+// }
+
 function ticTacToe(board){
-	
-};
+	for (var i = 0; i < board.length; i++) {
+		if(checkRow(board[i]) === true || checkCol(board[i]) === true) {
+		
+	}
+
+	}
+}
