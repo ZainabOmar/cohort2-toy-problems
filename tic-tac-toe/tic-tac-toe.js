@@ -39,6 +39,7 @@ ticTacToe(solvedBoard);//should return 1
 // }
 // if (counter >= 2) {
 // 	return -1;
+// console.log(counter)
 // }
 // };
 
