@@ -49,11 +49,9 @@ function twoSum(nums, target){
 	var newArray = [];
 	var x = nums[0];
 	var y = nums[1];
-	for (var i = 0; i < nums.length; i++) {
-		if(target === (x+y)) {
-			newArray.push(nums.indexOf(x), nums.indexOf(y))
-			nums.length =0
-		}
+	if(target === (x+y)) {
+		newArray.push(nums.indexOf(x), nums.indexOf(y))
+		nums.length =0
 	}
 	return newArray;
 }
@@ -70,5 +68,13 @@ countAllNumbers(2); //should return 91 because there are 91 numbers that have un
 */
 
 function countAllNumbers(n){
-
+	var counter = 0;
+	var temp = ""
+	var x = Math.pow(10, n)
+	for (var i = x; i > 1; i--) {
+		temp = i 
+		if(temp)
+		counter++
+	}
+	return counter;
 };
