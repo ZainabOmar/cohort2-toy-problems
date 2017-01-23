@@ -14,7 +14,21 @@ arr = [2,4,3,6,8,2,3,4,8];
 singleNumber(arr);//should return 6 because it only appear once
 */
 function singleNumber(arr){
+	arr.sort()
+	//var arr2 = arr1.splice(arr1.length/2)
+	var singleElement = arr[0]
+	arr = arr.slice(1)
+	var counter = 0;
+	for (var i = 0; i < arr.length; i++) {
+		if(singleElement === arr[i] ) {
+			arr = arr.slice(arr[i])
+			counter++;
+		}
+		if(counter >0) {
 
+		}
+	}
+	return arr;
 }
 
 /*
@@ -32,7 +46,16 @@ twoSum(nums,9); //should return [0,1] because nums[0] + nums[1] = 2 + 7 = 9;
 */
 
 function twoSum(nums, target){
-
+	var newArray = [];
+	var x = nums[0];
+	var y = nums[1];
+	for (var i = 0; i < nums.length; i++) {
+		if(target === (x+y)) {
+			newArray.push(nums.indexOf(x), nums.indexOf(y))
+			nums.length =0
+		}
+	}
+	return newArray;
 }
 
 /*
