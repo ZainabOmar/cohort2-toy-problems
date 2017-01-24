@@ -38,6 +38,16 @@
  */
 
 var rotateMatrix =function (matrix) {
-	
+	var index = 0;
+	var t = matrix.length-1
+	for (var i = 0; i < matrix.length; i++) {
+	var lastIndex = matrix[t][index]
+	var index2 = matrix[index][index];
+	var temp = matrix[index]
+		matrix[i][index] = lastIndex
+		lastIndex = index2
+		index++;
+		t--;
+		}
+		return matrix;
 }
-///////////////////
