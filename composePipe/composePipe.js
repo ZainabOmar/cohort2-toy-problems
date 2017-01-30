@@ -39,7 +39,11 @@ var add2 = function(number){ return number + 2; }
 var multiplyBy3 = function(number){ return number * 3; }
 
 var pipe = function(func1,func2){
-  
+  var args = arguments
+  for (var i = 0; i < args.length; i++) {
+    console.log(args[i])
+  }
+  //return 
 };
 
 var addAndMultiplyTwice = pipe(add2, multiplyBy3, multiplyBy3);
@@ -49,9 +53,29 @@ var addAndMultiplyTwice = pipe(add2, multiplyBy3, multiplyBy3);
  var greet = function(name){ return 'hello ' + name;}
  var exclaim = function(statement) { return statement.toUpperCase() + '!';}
 
-var compose = function(){
-  
+var compose = function(greet, exclaim){
+  return greet(exclaim);
 };
 
+var welcome = compose(greet, exclaim);
+
+//____________________________________________________________________________
+
+
+ var greet = function(name){ return 'hello ' + name;}
+ var exclaim = function(statement) { return statement.toUpperCase() + '!';}
+
+var compose = function(greet, exclaim){
+  var args = arguments
+  var name = "";
+  for (var i = 0; i < args.length; i++) {
+    if(typeof args[i] === "string" ) {
+      name = args[i]
+    }
+  }
+  exclaim = exclaim(name)
+  greet = greet(exclaim)
+  return greet;
+};
 
 var welcome = compose(greet, exclaim);
