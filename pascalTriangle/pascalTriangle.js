@@ -25,6 +25,25 @@ buildTriangle(3);// should output [[1],[1,1],[1,2,1]];
 */
 
 var buildTriangle = function(numOfRows){
-	
+	var array = [[1], [1, 1]];
+	if(numOfRows === 1) {
+		return array[0];
+	}
+	else if (numOfRows === 2) {
+		return array;
+	}
+	else if (numOfRows > 2) {
+		for (var i = numOfRows; i > 2; i--) {
+			var newArr = [];
+			//console.log(i)
+			newArr.push(i+1)
+			newArr.unshift(1)
+			newArr.push(1)
+			array.push(newArr)
+			// for (var j = ; j >= 0; j--) {
+			// 	Things[i]
+			// }
+		}
+	}
+	return array;
 }
-		
