@@ -14,21 +14,23 @@
 // A Board class will be useful. You can add extra methods to it.
 
 var makeBoard = function(n) {
-  var board = [];
-  for (var i = 0; i < n; i++) {
-    board.push([]);
-    for (var j = 0; j < n; j++) {
-      board[i].push(false);
-    }
-  }
-  
-  board.togglePiece = function(i, j) {
-    this[i][j] = !this[i][j];
-  }
-  board.hasBeenVisited = function(i, j) {
-    return !!this[i][j];
-  }
-  return board;
+	var board = [];
+	for (var i = 0; i < n; i++) {
+		board.push([]);
+		for (var j = 0; j < n; j++) {
+			board[i].push(false);
+		}
+	}
+
+	board.togglePiece = function(i, j) {
+		this[i][j] = !this[i][j];
+	}
+
+	board.hasBeenVisited = function(i, j) {
+		return !!this[i][j];
+	}
+
+	return board;
 };
 
 //You can create a board size 5 like this:
@@ -36,10 +38,17 @@ var makeBoard = function(n) {
 //The answer for a board size 5 is 8512 unique paths
 
 var robotPaths = function(myBoard) {
- 
+	var result = 0;
+	var temp = 0;
+	var x = makeBoard(myBoard)
+	for(var i = 0; i < x.length; i++) {
+			result++;
+			temp+= Math.pow(result, x[i].length)
+	}
+	return temp;
 }
 
-      
+
 
 
 
