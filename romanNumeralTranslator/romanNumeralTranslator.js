@@ -26,6 +26,7 @@ var translateRomanNumeral = function(romanNumeral){
 	  D: 500,
 	  M: 1000
 	};
+
 	var array = romanNumeral.split("")
 	for (var i = 0; i < array.length; i++) {
 		for(var key in DIGIT_VALUES) {
