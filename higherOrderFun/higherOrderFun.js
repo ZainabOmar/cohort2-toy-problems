@@ -12,7 +12,9 @@ See example usage to understand what arguments are passed to the callback.
 */
 
 Array.prototype.map = function(callback){
-
+	for (var i = 0; i < this.length; i++) {
+		callback(this[i])
+	}
 }
 
 /*
@@ -39,7 +41,15 @@ Please see example usage to understand what should be passed to the callback.
 */
 
 var asyncSum = function(a,b,callback){
-
+	var result = 0;
+	var error = false;
+	if (typeof a === "number" && typeof b === "number" && error === false) {
+		result = a+b;
+	}
+	else {
+		error = true;
+	}
+	return logNumber (error, result)
 };
 
 /*
@@ -47,11 +57,11 @@ Example use:
 */
 
 var logNumber = function(error, number){
-  if(error){
-    console.log('Error: ', error);
-  } else {
-    console.log('The total is: ', number)
-  }
+	if(error){
+		console.log('Error: ', error);
+	} else {
+		console.log('The total is: ', number)
+	}
 };
 
 /*
@@ -65,7 +75,7 @@ Problem 3 (ADVANCED):
 
 What kind of candy do you like?
 Your answer: 
-
+"Jordan almonds"
 */
 
 
