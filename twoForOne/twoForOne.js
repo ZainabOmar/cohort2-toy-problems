@@ -15,7 +15,12 @@ abc(); // should return 'a' again on this fourth call
 
 
 function makeLooper(string){
+	// for (var i = 0; i < string.length; i++) {
+	// 	var str = "";
 
+	// 	str =  string[i];
+	// }
+	// return str
 };
 
 
@@ -39,6 +44,8 @@ A pyramid will square the number of cans in each level:
 144
 169
 196
+225
+256
 
 ...
 
@@ -52,7 +59,16 @@ pyramid(1666); // should === 16
 */
 
 function pyramid(cans){
-	
+	var counter = 0;
+	var result = 0;
+	for (var i = 1; i <= cans; i++) {
+		result += Math.pow(i, 2) 
+			counter++;
+		if (result === cans) {
+			break;
+		}
+	}
+	return counter;
 };
 
 
